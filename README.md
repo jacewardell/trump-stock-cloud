@@ -85,6 +85,19 @@ venv\Scripts\python.exe src\main.py --posts-file tests\sample_posts.json
 Useful flags: `--date YYYY-MM-DD`, `--since-hours 24`, `--refresh-companies`,
 `--source archive|truthbrush`, `--match llm|dict`.
 
+## Browse the charts (GitHub Pages)
+
+`index.html` is a static page that reads `output/manifest.json` (regenerated on
+every run) and shows the latest chart, a date picker for past days, and an
+all-time leaderboard. To publish it:
+
+**Repo → Settings → Pages → Source: "Deploy from a branch" → Branch `main`,
+folder `/ (root)` → Save.**
+
+The site then lives at `https://jacewardell.github.io/trump-stock-cloud/` and
+updates automatically each day when the run commits a new chart + manifest.
+(Free for public repos; private repos need GitHub Pro.)
+
 ## Run daily on macOS — no API key (recommended)
 
 This runs the whole pipeline locally on a schedule and does the LLM adjudication
