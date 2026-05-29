@@ -73,8 +73,10 @@ def _get_posts(args, handle: str) -> list[dict]:
 
 
 def _render_and_report(counts, refs, by_symbol, date_str, handle, post_count) -> int:
+    from publish import build_manifest
     png = render_chart(counts, by_symbol, date_str, handle, post_count)
     js = write_json(counts, by_symbol, date_str, handle, post_count, refs)
+    build_manifest()  # refresh the GitHub Pages index
     print(f"\nTop mentions for {date_str}:")
     for sym, cnt in counts.most_common(10):
         print(f"  {cnt:>3}  {sym:<6} {by_symbol[sym].name}")

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trump → Stock Mentions</title>
+<style>
+  :root { --fg:#1a2330; --muted:#6b7785; --line:#e3e8ef; --bar:#2a7ab0; --bg:#f7f9fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:920px; margin:0 auto; padding:28px 20px 64px; }
+  h1 { font-size:1.5rem; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:.9rem; margin-bottom:24px; }
+  .sub a { color:var(--bar); text-decoration:none; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:12px;
+          padding:20px; margin-bottom:22px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  h2 { font-size:1.05rem; margin:0 0 12px; }
+  select { font:inherit; padding:6px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  img { width:100%; height:auto; border-radius:8px; margin-top:14px; }
+  table { width:100%; border-collapse:collapse; margin-top:6px; }
+  th,td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); font-size:.92rem; }
+  th { color:var(--muted); font-weight:600; }
+  td.n { text-align:right; font-variant-numeric:tabular-nums; width:64px; }
+  .sym { color:var(--muted); font-size:.82rem; }
+  .empty { color:var(--muted); font-style:italic; padding:10px 0; }
+  .bartrack { background:var(--line); border-radius:4px; height:8px; overflow:hidden; }
+  .barfill { background:var(--bar); height:100%; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Trump → Stock Mentions</h1>
+  <div class="sub" id="sub">Loading…</div>
+
+  <div class="card">
+    <div class="row">
+      <h2 style="margin:0">Daily chart</h2>
+      <label>Date <select id="datesel"></select></label>
+    </div>
+    <img id="chart" alt="daily chart" hidden>
+    <div id="daytable"></div>
+  </div>
+
+  <div class="card">
+    <h2>All-time leaderboard</h2>
+    <div class="sub" style="margin:-6px 0 10px" id="alltimecov"></div>
+    <div id="alltime"></div>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+
+function table(rows, max) {
+  if (!rows.length) return '<div class="empty">No company mentions.</div>';
+  const m = max || rows[0].count;
+  return '<table><thead><tr><th>Company</th><th>Mentions</th><th></th></tr></thead><tbody>' +
+    rows.map(r => `<tr>
+      <td>${r.name} <span class="sym">${r.symbol}</span></td>
+      <td class="n">${r.count}</td>
+      <td style="width:40%"><div class="bartrack"><div class="barfill" style="width:${Math.round(100*r.count/m)}%"></div></div></td>
+    </tr>`).join('') + '</tbody></table>';
+}
+
+fetch('output/manifest.json?' + Date.now()).then(r => r.json()).then(m => {
+  const days = m.days || [];
+  $('#sub').innerHTML = `Companies <a href="https://truthsocial.com/@${m.handle}" target="_blank" rel="noopener">@${m.handle}</a> mentioned on Truth Social. ` +
+    `${days.length} day${days.length===1?'':'s'} tracked · updated ${m.updated}.`;
+
+  // Date picker (newest first), default latest
+  const sel = $('#datesel');
+  [...days].reverse().forEach(d => {
+    const o = document.createElement('option'); o.value = d.date; o.textContent = d.date; sel.appendChild(o);
+  });
+  function show(date) {
+    const d = days.find(x => x.date === date); if (!d) return;
+    const img = $('#chart'); img.src = `output/${date}.png?` + Date.now(); img.hidden = false;
+    $('#daytable').innerHTML = `<div class="sub" style="margin:12px 0 4px">${d.post_count} posts that day</div>` + table(d.companies);
+  }
+  if (days.length) { sel.value = days[days.length-1].date; show(sel.value); }
+  else { $('#daytable').innerHTML = '<div class="empty">No data yet.</div>'; }
+  sel.addEventListener('change', e => show(e.target.value));
+
+  // All-time totals
+  const totals = {};
+  days.forEach(d => d.companies.forEach(c => {
+    (totals[c.symbol] ??= {symbol:c.symbol, name:c.name, count:0}).count += c.count;
+  }));
+  const ranked = Object.values(totals).sort((a,b) => b.count - a.count);
+  $('#alltime').innerHTML = table(ranked);
+  const totalPosts = days.reduce((s,d) => s + d.post_count, 0);
+  $('#alltimecov').textContent = `${ranked.length} companies across ${totalPosts} posts.`;
+}).catch(() => { $('#sub').textContent = 'Could not load output/manifest.json yet.'; });
+</script>
+</body>
+</html>
