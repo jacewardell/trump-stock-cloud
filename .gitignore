@@ -7,3 +7,4 @@ data/companies.csv
 # Tracked on purpose (the scheduled agent commits these back as history):
 #   output/*.png, output/*.json, candidates/*.json, verdicts/*.json
 .DS_Store
+run.log
