@@ -85,6 +85,48 @@ venv\Scripts\python.exe src\main.py --posts-file tests\sample_posts.json
 Useful flags: `--date YYYY-MM-DD`, `--since-hours 24`, `--refresh-companies`,
 `--source archive|truthbrush`, `--match llm|dict`.
 
+## Run daily on macOS — no API key (recommended)
+
+This runs the whole pipeline locally on a schedule and does the LLM adjudication
+with **headless Claude Code** (your Claude subscription), so **no Anthropic API
+key is needed**. Output is committed back to this repo as the chart history.
+
+**Prerequisites:**
+- Python 3.11+
+- **Claude Code CLI** installed and logged in — run `claude` once interactively
+  to authenticate (this is what lets the scheduled job adjudicate for free).
+- A clone of this repo with an `origin` remote you can **push to** (so the daily
+  chart persists). `git config --global user.email/name` set.
+
+**Install (one command):**
+
+```bash
+git clone https://github.com/jacewardell/trump-stock-cloud.git
+cd trump-stock-cloud
+bash setup_mac.sh
+```
+
+`setup_mac.sh` creates the venv, installs deps, caches the company list,
+generates a launchd agent scheduled at **4:15pm ET in your machine's local
+time**, and loads it. It prints warnings if `claude`, a git identity, or an
+`origin` remote are missing.
+
+**Daily flow** (`run_daily_local.sh`): emit candidates → headless `claude -p`
+writes `verdicts/<date>.json` → finalize chart → commit & push.
+
+```bash
+bash run_daily_local.sh        # run now / backfill today
+cat run.log                    # last run's log
+launchctl print gui/$(id -u)/com.trumpstockcloud.daily | grep -i "next firing"
+# uninstall:
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.trumpstockcloud.daily.plist \
+  && rm ~/Library/LaunchAgents/com.trumpstockcloud.daily.plist
+```
+
+Caveats: the Mac must be **awake** at the scheduled time (launchd runs a missed
+job on next wake, but skips it if the machine was off). The 24h archive lookback
+means a fully-missed day can't be backfilled later than ~24h.
+
 ## Schedule at market close (Windows Task Scheduler)
 
 Market close is **4:00 PM ET**. Schedule `run_daily.bat` a few minutes after.
