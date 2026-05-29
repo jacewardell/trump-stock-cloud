@@ -1,0 +1,8 @@
+anthropic>=0.69
+matplotlib>=3.8
+python-dotenv>=1.0
+requests>=2.31
+
+# Optional: only needed for `--source truthbrush` (requires a Truth Social login).
+# truthbrush 0.4.x needs Python >=3.14; 0.3.0 runs on 3.11+.
+# truthbrush==0.3.0

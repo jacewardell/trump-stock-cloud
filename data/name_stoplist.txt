@@ -1,0 +1,20 @@
+# Company names that collapse to a generic English word and cause noise as
+# bare NAME matches. These companies still match via ALL-CAPS ticker / cashtag.
+# Values are compared against the cleaned (lowercased) company name.
+# One per line; '#' starts a comment.
+news
+arm
+ball
+pool
+block
+southern
+target
+intel
+waters
+rollins
+dow
+mccormick
+visa
+progressive
+booking
+coherent
