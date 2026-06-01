@@ -43,6 +43,9 @@ fi
 # 3. Finalize -> output/DATE.png + output/DATE.json (cashtags-only if verdicts missing)
 "$PY" src/main.py --finalize --date "$DATE" || { echo "finalize failed"; exit 1; }
 
+# 3b. Email the summary + chart if there were any mentions (non-fatal on failure)
+"$PY" src/notify.py --date "$DATE" || echo "notify failed (continuing)"
+
 # 4. Commit + push the results (use the machine's git identity, with a fallback)
 GIT_NAME="$("$GIT" config user.name 2>/dev/null || echo 'trump-stock-cloud')"
 GIT_EMAIL="$("$GIT" config user.email 2>/dev/null || echo 'noreply@localhost')"
