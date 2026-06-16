@@ -1,0 +1,48 @@
+{
+  "date": "2026-06-16",
+  "handle": "realDonaldTrump",
+  "post_count": 5,
+  "records": [
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/116760664101169055",
+      "created_at": "2026-06-16T16:12:24.312000+00:00",
+      "text": "Biden DOJ targeted parents at school board meetings despite FBI, sheriffs' objections, memos show: https://justthenews.com/government/federal-agencies/afl",
+      "confirmed": [],
+      "candidates": []
+    },
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/116760662558632411",
+      "created_at": "2026-06-16T16:12:00.779000+00:00",
+      "text": "FBI stopped alleged terror plot to attack UFC 250 event with drones and snipers, officials said: https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
+      "confirmed": [],
+      "candidates": []
+    },
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/116760642672400305",
+      "created_at": "2026-06-16T16:06:57.335000+00:00",
+      "text": "Former Trump economist says Iran deal means big economic boom for US: https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
+      "confirmed": [],
+      "candidates": []
+    },
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/116760641102604510",
+      "created_at": "2026-06-16T16:06:33.381000+00:00",
+      "text": "US attorney in California suspects voter fraud investigation will result in charges: https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
+      "confirmed": [],
+      "candidates": []
+    },
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/116756674797972374",
+      "created_at": "2026-06-15T23:17:52.376000+00:00",
+      "text": "Iran has agreed to never have a Nuclear Weapon! Also, the story that the U.S. is paying Iran 300 million Dollars is Fake News, put out by the Dumocrats!!! President DJT",
+      "confirmed": [],
+      "candidates": [
+        {
+          "id": 0,
+          "ticker": "NWS",
+          "company": "News Corp (Class B)"
+        }
+      ]
+    }
+  ]
+}
