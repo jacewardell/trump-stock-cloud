@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T16:15:26-04:00",
+  "updated": "2026-06-18T16:15:38-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -101,6 +101,27 @@
       "date": "2026-06-17",
       "post_count": 9,
       "companies": []
+    },
+    {
+      "date": "2026-06-18",
+      "post_count": 27,
+      "companies": [
+        {
+          "symbol": "INTC",
+          "name": "Intel",
+          "count": 1
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Apple Inc.",
+          "count": 1
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Nvidia",
+          "count": 1
+        }
+      ]
     }
   ]
 }
