@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T16:18:02-04:00",
+  "updated": "2026-07-20T16:15:33-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -277,6 +277,17 @@
       "date": "2026-07-19",
       "post_count": 15,
       "companies": []
+    },
+    {
+      "date": "2026-07-20",
+      "post_count": 10,
+      "companies": [
+        {
+          "symbol": "WMT",
+          "name": "Walmart",
+          "count": 1
+        }
+      ]
     }
   ]
 }
