@@ -73,6 +73,40 @@ def build_message(data: dict, sender: str, recipient: str,
     return msg
 
 
+def _smtp_creds() -> tuple[str, str, str] | None:
+    """Return (user, password, recipient) or None if not configured."""
+    user = os.getenv("GMAIL_USER")
+    password = os.getenv("GMAIL_APP_PASSWORD")
+    recipient = os.getenv("NOTIFY_TO") or user
+    if not user or not password:
+        return None
+    return user, password, recipient
+
+
+def _send(msg: EmailMessage, user: str, password: str) -> None:
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+        smtp.login(user, password.replace(" ", ""))
+        smtp.send_message(msg)
+
+
+def send_alert_email(subject: str, body: str) -> bool:
+    """Send a plain-text real-time alert. Returns True if sent, False if SMTP
+    is not configured. Used by the poller, separate from the daily digest."""
+    creds = _smtp_creds()
+    if not creds:
+        print("notify: GMAIL_USER / GMAIL_APP_PASSWORD not set; alert skipped")
+        return False
+    user, password, recipient = creds
+    msg = EmailMessage()
+    msg["From"] = user
+    msg["To"] = recipient
+    msg["Subject"] = subject
+    msg.set_content(body)
+    _send(msg, user, password)
+    print(f"notify: alert emailed to {recipient}")
+    return True
+
+
 def send_mention_email(date_str: str) -> bool:
     """Returns True if an email was sent, False if skipped (no mentions)."""
     json_path = OUTPUT_DIR / f"{date_str}.json"
@@ -85,17 +119,14 @@ def send_mention_email(date_str: str) -> bool:
         print(f"notify: no mentions for {date_str}; no email sent")
         return False
 
-    user = os.getenv("GMAIL_USER")
-    password = os.getenv("GMAIL_APP_PASSWORD")
-    recipient = os.getenv("NOTIFY_TO") or user
-    if not user or not password:
+    creds = _smtp_creds()
+    if not creds:
         print("notify: GMAIL_USER / GMAIL_APP_PASSWORD not set; skipping email")
         return False
+    user, password, recipient = creds
 
     msg = build_message(data, user, recipient, OUTPUT_DIR / f"{date_str}.png")
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-        smtp.login(user, password.replace(" ", ""))
-        smtp.send_message(msg)
+    _send(msg, user, password)
     print(f"notify: emailed {len(data['companies'])} mentions to {recipient}")
     return True
 

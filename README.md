@@ -85,6 +85,40 @@ venv\Scripts\python.exe src\main.py --posts-file tests\sample_posts.json
 Useful flags: `--date YYYY-MM-DD`, `--since-hours 24`, `--refresh-companies`,
 `--source archive|truthbrush`, `--match llm|dict`.
 
+## Real-time alerts (poller)
+
+The daily job renders one chart per day; the **poller** (`src/poll.py`) is the
+low-latency path: it checks for *new* posts every ~2 minutes and emails an alert
+the instant one mentions a company, so a 5am post reaches you at ~5:05am instead
+of at the daily run.
+
+- **Dedup:** `state/seen.json` (gitignored) records every handled post id, so you
+  never get a duplicate alert and each post is scanned once.
+- **Matching:** LLM adjudication when `ANTHROPIC_API_KEY` is set (few posts per
+  cycle, so it's cheap/fast); otherwise the dictionary + name-stoplist path.
+- **Email:** reuses the Gmail SMTP config in `.env` (`GMAIL_USER`,
+  `GMAIL_APP_PASSWORD`, `NOTIFY_TO`).
+
+Run once by hand (prints, sends nothing, writes no state):
+
+```bash
+venv/bin/python src/poll.py --dry-run
+```
+
+### Install the 2-minute launchd agent (macOS)
+
+The poller must run continuously, so the Mac has to stay awake: keep it plugged
+in with the lid open (`run_poll_local.sh` wraps the poll in `caffeinate -i` to
+block idle sleep; closing the lid still sleeps it). Then:
+
+```bash
+cp com.jacewardell.trump-stock-poll.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.jacewardell.trump-stock-poll.plist
+# logs -> poll.log ; unload with: launchctl unload ~/Library/LaunchAgents/com.jacewardell.trump-stock-poll.plist
+```
+
+This runs alongside the existing daily chart job; the two are independent.
+
 ## Browse the charts (GitHub Pages)
 
 `index.html` is a static page that reads `output/manifest.json` (regenerated on

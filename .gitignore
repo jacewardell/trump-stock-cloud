@@ -8,3 +8,5 @@ data/companies.csv
 #   output/*.png, output/*.json, candidates/*.json, verdicts/*.json
 .DS_Store
 run.log
+poll.log
+state/
