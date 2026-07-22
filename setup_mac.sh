@@ -1,13 +1,16 @@
 #!/bin/bash
-# One-command setup for running the daily job on a Mac via launchd.
+# One-command setup for running the daily + poll jobs on a Mac via launchd.
 # Creates the venv, installs deps, caches the company list, generates the
-# launchd agent (scheduled at 4:15pm ET in this machine's local time), and loads it.
+# launchd agents (daily at 4:15pm ET in this machine's local time, poll every
+# 2 minutes), and loads them.
 set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PROJECT_DIR"
 LABEL="com.trumpstockcloud.daily"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
+POLL_LABEL="com.trumpstockcloud.poll"
+POLL_PLIST="$HOME/Library/LaunchAgents/$POLL_LABEL.plist"
 
 echo "==> Python venv + dependencies"
 python3 -m venv venv
@@ -59,14 +62,48 @@ cat > "$PLIST" <<EOF
 </plist>
 EOF
 
-echo "==> Loading the agent"
-launchctl bootout "gui/$(id -u)" "$PLIST" 2>/dev/null || true
-launchctl bootstrap "gui/$(id -u)" "$PLIST"
+echo "==> Writing launchd agent: $POLL_PLIST"
+cat > "$POLL_PLIST" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>$POLL_LABEL</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>$PROJECT_DIR/run_poll_local.sh</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>120</integer>
+    <key>StandardOutPath</key><string>$PROJECT_DIR/poll.log</string>
+    <key>StandardErrorPath</key><string>$PROJECT_DIR/poll.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
+EOF
+
+echo "==> Removing legacy agents (old labels)"
+for old in com.jacewardell.trump-stock-cloud com.jacewardell.trump-stock-poll; do
+  old_plist="$HOME/Library/LaunchAgents/$old.plist"
+  [ -f "$old_plist" ] || continue
+  launchctl bootout "gui/$(id -u)" "$old_plist" 2>/dev/null || true
+  rm "$old_plist"
+  echo "   removed $old"
+done
+
+echo "==> Loading the agents"
+for p in "$PLIST" "$POLL_PLIST"; do
+  launchctl bootout "gui/$(id -u)" "$p" 2>/dev/null || true
+  launchctl bootstrap "gui/$(id -u)" "$p"
+done
 
 echo
-echo "Done. The job runs daily at ${HH}:$(printf '%02d' "$MM") local (4:15pm ET)."
+echo "Done. Daily job runs at ${HH}:$(printf '%02d' "$MM") local (4:15pm ET); poll runs every 2 min."
 echo "  Run now:    bash $PROJECT_DIR/run_daily_local.sh"
-echo "  Log:        $PROJECT_DIR/run.log"
-echo "  Uninstall:  launchctl bootout gui/\$(id -u) $PLIST && rm $PLIST"
+echo "  Logs:       $PROJECT_DIR/run.log, $PROJECT_DIR/poll.log"
+echo "  Uninstall:  launchctl bootout gui/\$(id -u) <plist> && rm <plist>  (daily + poll)"
 echo "Note: if your timezone does not observe US daylight saving (e.g. Arizona),"
 echo "re-run this script at the next DST change to keep it aligned to 4:15pm ET."
