@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T16:24:05-04:00",
+  "updated": "2026-07-27T16:15:03-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -328,6 +328,11 @@
     {
       "date": "2026-07-26",
       "post_count": 13,
+      "companies": []
+    },
+    {
+      "date": "2026-07-27",
+      "post_count": 8,
       "companies": []
     }
   ]
