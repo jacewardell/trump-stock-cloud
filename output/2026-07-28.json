@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-28",
+  "handle": "realDonaldTrump",
+  "post_count": 52,
+  "companies": [
+    {
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "count": 2,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/116994500400281844",
+          "created_at": "2026-07-27T23:20:03.075000+00:00",
+          "excerpt": "NVIDIA: Building in America, for America: https://www.nvidia.com/en-us/made-in-usa/"
+        },
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/116994497445449017",
+          "created_at": "2026-07-27T23:19:17.994000+00:00",
+          "excerpt": "NVIDIA and Partners Build in America, for America: https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/"
+        }
+      ]
+    }
+  ]
+}
