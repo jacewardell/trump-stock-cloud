@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-03",
+  "handle": "realDonaldTrump",
+  "post_count": 4,
+  "companies": [
+    {
+      "symbol": "CVX",
+      "name": "Chevron Corporation",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117031897808226413",
+          "created_at": "2026-08-03T13:50:42.242000+00:00",
+          "excerpt": "Mike Wirth, Chairman and CEO of Chevron, just gave, in an interview with the fabulous Maria Bartiromo, all of the reasons that his company is doing so well. The only thing he conveniently forgot to me\u2026"
+        }
+      ]
+    }
+  ]
+}
