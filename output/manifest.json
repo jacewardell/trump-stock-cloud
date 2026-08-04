@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T16:15:27-04:00",
+  "updated": "2026-08-04T16:15:39-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -379,6 +379,17 @@
           "symbol": "CVX",
           "name": "Chevron Corporation",
           "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "post_count": 60,
+      "companies": [
+        {
+          "symbol": "FOX",
+          "name": "Fox Corporation (Class B)",
+          "count": 2
         }
       ]
     }
