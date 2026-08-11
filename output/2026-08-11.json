@@ -1,0 +1,99 @@
+{
+  "date": "2026-08-11",
+  "handle": "realDonaldTrump",
+  "post_count": 27,
+  "companies": [
+    {
+      "symbol": "V",
+      "name": "Visa Inc.",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117074526504264990",
+          "created_at": "2026-08-11T02:31:44.520000+00:00",
+          "excerpt": "Chandler Hall, representing, on Television, the foolish Center for American Lack of Progress, stated that adding the National Guard to Cities, including our now Great Again, Washington, D.C., had \"NO\u2026"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "count": 1,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117074526504264990",
+          "created_at": "2026-08-11T02:31:44.520000+00:00",
+          "excerpt": "Chandler Hall, representing, on Television, the foolish Center for American Lack of Progress, stated that adding the National Guard to Cities, including our now Great Again, Washington, D.C., had \"NO\u2026"
+        }
+      ]
+    },
+    {
+      "symbol": "C",
+      "name": "Citigroup",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117074526504264990",
+          "created_at": "2026-08-11T02:31:44.520000+00:00",
+          "excerpt": "Chandler Hall, representing, on Television, the foolish Center for American Lack of Progress, stated that adding the National Guard to Cities, including our now Great Again, Washington, D.C., had \"NO\u2026"
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "name": "Walmart",
+      "count": 1,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117074526504264990",
+          "created_at": "2026-08-11T02:31:44.520000+00:00",
+          "excerpt": "Chandler Hall, representing, on Television, the foolish Center for American Lack of Progress, stated that adding the National Guard to Cities, including our now Great Again, Washington, D.C., had \"NO\u2026"
+        }
+      ]
+    },
+    {
+      "symbol": "GS",
+      "name": "Goldman Sachs",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117074526504264990",
+          "created_at": "2026-08-11T02:31:44.520000+00:00",
+          "excerpt": "Chandler Hall, representing, on Television, the foolish Center for American Lack of Progress, stated that adding the National Guard to Cities, including our now Great Again, Washington, D.C., had \"NO\u2026"
+        }
+      ]
+    },
+    {
+      "symbol": "BAC",
+      "name": "Bank of America",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117074526504264990",
+          "created_at": "2026-08-11T02:31:44.520000+00:00",
+          "excerpt": "Chandler Hall, representing, on Television, the foolish Center for American Lack of Progress, stated that adding the National Guard to Cities, including our now Great Again, Washington, D.C., had \"NO\u2026"
+        }
+      ]
+    }
+  ]
+}
