@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-13",
+  "handle": "realDonaldTrump",
+  "post_count": 31,
+  "companies": [
+    {
+      "symbol": "WMT",
+      "name": "Walmart",
+      "count": 1,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117085013643913800",
+          "created_at": "2026-08-12T22:58:45.572000+00:00",
+          "excerpt": "I am pleased to announce the nomination of Lee Rudofsky to the United States Court of Appeals for the Eighth Circuit! Lee is currently a distinguished Federal District Court Judge in Arkansas. He prev\u2026"
+        }
+      ]
+    }
+  ]
+}
