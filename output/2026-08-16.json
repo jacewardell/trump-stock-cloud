@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-16",
+  "handle": "realDonaldTrump",
+  "post_count": 19,
+  "companies": [
+    {
+      "symbol": "FOX",
+      "name": "Fox Corporation (Class B)",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117107001767972921",
+          "created_at": "2026-08-16T20:10:37.719000+00:00",
+          "excerpt": "Watching FoxNews with Shannon Bream is always like watching the Worst of Fake News CNN. I don't know Shannon, but she always seems to pick guests, charts, and \"polls\" that are negative, never talking\u2026"
+        }
+      ]
+    }
+  ]
+}
