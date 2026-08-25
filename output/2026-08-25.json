@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-25",
+  "handle": "realDonaldTrump",
+  "post_count": 26,
+  "companies": [
+    {
+      "symbol": "SPGI",
+      "name": "S&P Global",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117156902282061140",
+          "created_at": "2026-08-25T15:40:59.136000+00:00",
+          "excerpt": "S&P Global: 'US Business Is Booming': https://www.breitbart.com/economy/2026/08/21/biz-is-booming/"
+        }
+      ]
+    }
+  ]
+}

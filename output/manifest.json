@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T16:15:25-04:00",
+  "updated": "2026-08-25T16:15:37-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -541,6 +541,17 @@
       "date": "2026-08-24",
       "post_count": 33,
       "companies": []
+    },
+    {
+      "date": "2026-08-25",
+      "post_count": 26,
+      "companies": [
+        {
+          "symbol": "SPGI",
+          "name": "S&P Global",
+          "count": 1
+        }
+      ]
     }
   ]
 }
