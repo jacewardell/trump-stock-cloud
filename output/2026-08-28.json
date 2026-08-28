@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-28",
+  "handle": "realDonaldTrump",
+  "post_count": 22,
+  "companies": [
+    {
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "count": 1,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117169577666973164",
+          "created_at": "2026-08-27T21:24:30.162000+00:00",
+          "excerpt": "Nvidia just announced Record Sales of 96.2 Billion Dollars, forecasting a 70% rise in Revenue in 2028. Congratulations to Jensen Huang on these incredible numbers, and the Company's Great Success. Onl\u2026"
+        }
+      ]
+    }
+  ]
+}
