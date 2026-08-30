@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T16:18:42-04:00",
+  "updated": "2026-08-30T16:18:47-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -584,6 +584,22 @@
       "date": "2026-08-29",
       "post_count": 13,
       "companies": []
+    },
+    {
+      "date": "2026-08-30",
+      "post_count": 13,
+      "companies": [
+        {
+          "symbol": "GM",
+          "name": "General Motors",
+          "count": 1
+        },
+        {
+          "symbol": "BA",
+          "name": "Boeing",
+          "count": 1
+        }
+      ]
     }
   ]
 }
