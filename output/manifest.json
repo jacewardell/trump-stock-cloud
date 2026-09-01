@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T16:15:28-04:00",
+  "updated": "2026-09-01T16:15:34-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -605,6 +605,17 @@
       "date": "2026-08-31",
       "post_count": 27,
       "companies": []
+    },
+    {
+      "date": "2026-09-01",
+      "post_count": 25,
+      "companies": [
+        {
+          "symbol": "NVDA",
+          "name": "Nvidia",
+          "count": 2
+        }
+      ]
     }
   ]
 }
