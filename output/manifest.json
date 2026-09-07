@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T19:09:20-04:00",
+  "updated": "2026-09-07T16:21:47-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -652,6 +652,47 @@
       "date": "2026-09-06",
       "post_count": 9,
       "companies": []
+    },
+    {
+      "date": "2026-09-07",
+      "post_count": 25,
+      "companies": [
+        {
+          "symbol": "C",
+          "name": "Citigroup",
+          "count": 1
+        },
+        {
+          "symbol": "V",
+          "name": "Visa Inc.",
+          "count": 1
+        },
+        {
+          "symbol": "WMT",
+          "name": "Walmart",
+          "count": 1
+        },
+        {
+          "symbol": "GS",
+          "name": "Goldman Sachs",
+          "count": 1
+        },
+        {
+          "symbol": "BAC",
+          "name": "Bank of America",
+          "count": 1
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Apple Inc.",
+          "count": 1
+        },
+        {
+          "symbol": "FOX",
+          "name": "Fox Corporation (Class B)",
+          "count": 1
+        }
+      ]
     }
   ]
 }
