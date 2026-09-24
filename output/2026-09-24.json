@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-24",
+  "handle": "realDonaldTrump",
+  "post_count": 14,
+  "companies": [
+    {
+      "symbol": "BA",
+      "name": "Boeing",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117323148147220269",
+          "created_at": "2026-09-24T00:19:29.727000+00:00",
+          "excerpt": "BIG DAY FOR BOEING AND AMERICAN MANUFACTURING! Today, T\u00fcrkiye and Bangladesh announced purchases totaling 111 Boeing Airplanes\u2014with options for 50 more\u2014following support from Howard Lutnick and the De\u2026"
+        }
+      ]
+    }
+  ]
+}
