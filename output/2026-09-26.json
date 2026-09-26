@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-26",
+  "handle": "realDonaldTrump",
+  "post_count": 21,
+  "companies": [
+    {
+      "symbol": "GM",
+      "name": "General Motors",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117338936999613227",
+          "created_at": "2026-09-26T19:14:48.496000+00:00",
+          "excerpt": "BIG DAY FOR AMERICAN AUTO WORKERS AND CAR BUYERS! I have just approved new Fuel Economy Standards that TERMINATE Sleepy Joe Biden and Pete Boot-EDGE-EDGE's ridiculous EV Mandate. The Dumocrats cost ou\u2026"
+        }
+      ]
+    },
+    {
+      "symbol": "SPGI",
+      "name": "S&P Global",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117338873310369293",
+          "created_at": "2026-09-26T18:58:36.675000+00:00",
+          "excerpt": "The American People elected me to deliver HISTORIC Economic Results, and now, I have a new responsibility, reporting our incredible results because the Fake News refuses to do it. S&P Global reported\u2026"
+        }
+      ]
+    }
+  ]
+}

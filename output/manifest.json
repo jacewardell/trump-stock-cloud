@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T16:15:24-04:00",
+  "updated": "2026-09-26T16:15:37-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -790,6 +790,22 @@
       "date": "2026-09-25",
       "post_count": 8,
       "companies": []
+    },
+    {
+      "date": "2026-09-26",
+      "post_count": 21,
+      "companies": [
+        {
+          "symbol": "GM",
+          "name": "General Motors",
+          "count": 1
+        },
+        {
+          "symbol": "SPGI",
+          "name": "S&P Global",
+          "count": 1
+        }
+      ]
     }
   ]
 }
