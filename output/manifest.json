@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T16:15:06-04:00",
+  "updated": "2026-09-30T16:15:25-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -821,6 +821,17 @@
       "date": "2026-09-29",
       "post_count": 3,
       "companies": []
+    },
+    {
+      "date": "2026-09-30",
+      "post_count": 5,
+      "companies": [
+        {
+          "symbol": "FOX",
+          "name": "Fox Corporation (Class B)",
+          "count": 1
+        }
+      ]
     }
   ]
 }
