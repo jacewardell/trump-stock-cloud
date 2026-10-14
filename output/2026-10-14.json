@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-14",
+  "handle": "realDonaldTrump",
+  "post_count": 20,
+  "companies": [
+    {
+      "symbol": "INTC",
+      "name": "Intel",
+      "count": 1,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117440248541514637",
+          "created_at": "2026-10-14T16:39:39.942000+00:00",
+          "excerpt": "ANOTHER MASSIVE 21 BILLION DOLLAR INVESTMENT FOR AMERICA!Today, under my leadership, GlobalFoundries and my Department of Commerce led by Secretary Howard Lutnick announced a MASSIVE 21 BILLION INVEST\u2026"
+        }
+      ]
+    }
+  ]
+}

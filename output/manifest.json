@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T16:15:06-04:00",
+  "updated": "2026-10-14T16:15:24-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -921,6 +921,17 @@
       "date": "2026-10-13",
       "post_count": 7,
       "companies": []
+    },
+    {
+      "date": "2026-10-14",
+      "post_count": 20,
+      "companies": [
+        {
+          "symbol": "INTC",
+          "name": "Intel",
+          "count": 1
+        }
+      ]
     }
   ]
 }
