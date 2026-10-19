@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-19",
+  "handle": "realDonaldTrump",
+  "post_count": 23,
+  "companies": [
+    {
+      "symbol": "FOX",
+      "name": "Fox Corporation (Class B)",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117467256855900007",
+          "created_at": "2026-10-19T11:08:14.114000+00:00",
+          "excerpt": "Fox spends more time defending Dumocrats, and putting on their views versus their Republican opponent, than at any time in the History of FoxNews. It's ridiculous! FoxNews is trying too hard to be Pol\u2026"
+        }
+      ]
+    }
+  ]
+}
