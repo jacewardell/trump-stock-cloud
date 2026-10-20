@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T16:15:19-04:00",
+  "updated": "2026-10-20T16:15:20-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -960,6 +960,22 @@
         {
           "symbol": "FOX",
           "name": "Fox Corporation (Class B)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "post_count": 43,
+      "companies": [
+        {
+          "symbol": "BA",
+          "name": "Boeing",
+          "count": 1
+        },
+        {
+          "symbol": "MRK",
+          "name": "Merck & Co.",
           "count": 1
         }
       ]

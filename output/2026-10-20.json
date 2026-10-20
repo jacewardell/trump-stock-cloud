@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-20",
+  "handle": "realDonaldTrump",
+  "post_count": 43,
+  "companies": [
+    {
+      "symbol": "BA",
+      "name": "Boeing",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117470533012557706",
+          "created_at": "2026-10-20T01:01:24.298000+00:00",
+          "excerpt": "Less than two years ago, Radical Left Dumocrats handed us the DARK AGE of America, but we quickly turned it into the GOLDEN AGE of America. Despite all the damage Dumocrats caused, our Nation is doing\u2026"
+        }
+      ]
+    },
+    {
+      "symbol": "MRK",
+      "name": "Merck & Co.",
+      "count": 1,
+      "indices": [
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117470533012557706",
+          "created_at": "2026-10-20T01:01:24.298000+00:00",
+          "excerpt": "Less than two years ago, Radical Left Dumocrats handed us the DARK AGE of America, but we quickly turned it into the GOLDEN AGE of America. Despite all the damage Dumocrats caused, our Nation is doing\u2026"
+        }
+      ]
+    }
+  ]
+}
