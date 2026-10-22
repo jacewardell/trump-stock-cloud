@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T16:15:19-04:00",
+  "updated": "2026-10-22T16:15:20-04:00",
   "handle": "realDonaldTrump",
   "days": [
     {
@@ -984,6 +984,17 @@
       "date": "2026-10-21",
       "post_count": 21,
       "companies": []
+    },
+    {
+      "date": "2026-10-22",
+      "post_count": 40,
+      "companies": [
+        {
+          "symbol": "AAPL",
+          "name": "Apple Inc.",
+          "count": 1
+        }
+      ]
     }
   ]
 }
