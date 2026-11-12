@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-12",
+  "handle": "realDonaldTrump",
+  "post_count": 10,
+  "companies": [
+    {
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "count": 1,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117604177898784579",
+          "created_at": "2026-11-12T15:29:03.425000+00:00",
+          "excerpt": "NOW THAT Nvidia CEO JENSEN HUANG, who has done a fantastic job, has resigned, there is only one man to take his place - TIM COOK of Apple. A Legend replaces a Legend! President DONALD J. TRUMP"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "count": 1,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117604177898784579",
+          "created_at": "2026-11-12T15:29:03.425000+00:00",
+          "excerpt": "NOW THAT Nvidia CEO JENSEN HUANG, who has done a fantastic job, has resigned, there is only one man to take his place - TIM COOK of Apple. A Legend replaces a Legend! President DONALD J. TRUMP"
+        }
+      ]
+    }
+  ]
+}
