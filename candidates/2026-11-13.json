@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-13",
+  "handle": "realDonaldTrump",
+  "post_count": 2,
+  "records": [
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/117606259365899322",
+      "created_at": "2026-11-13T00:18:24.093000+00:00",
+      "text": "Lilly breaks ground in Pennsylvania's Lehigh Valley on a $3.5 billion site to make next-generation obesity medicines, the latest of 10 new U.S. sites since 2020: https://investor.lilly.com/news-releases/news-release-details/lilly-breaks-ground-pennsylvanias-lehigh-valley-35-billion-site",
+      "confirmed": [],
+      "candidates": [
+        {
+          "id": 0,
+          "ticker": "NWS",
+          "company": "News Corp (Class B)"
+        }
+      ]
+    },
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/117606070721302149",
+      "created_at": "2026-11-12T23:30:25.604000+00:00",
+      "text": "From Hugh Hewitt: \"President Trump was as good as he has ever been today. Still the best interview in the country. Please pass along my thanks to President Trump. Hugh\"",
+      "confirmed": [],
+      "candidates": []
+    }
+  ]
+}
