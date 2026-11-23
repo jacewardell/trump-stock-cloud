@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-23",
+  "handle": "realDonaldTrump",
+  "post_count": 10,
+  "companies": [
+    {
+      "symbol": "NVDA",
+      "name": "Nvidia",
+      "count": 3,
+      "indices": [
+        "nasdaq100",
+        "sp500"
+      ],
+      "posts": [
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117666313179684854",
+          "created_at": "2026-11-23T14:50:52.569000+00:00",
+          "excerpt": "Congratulations to NVIDIA on having made, what I consider to be, an absolutely GREAT decision! President DONALD J. TRUMP"
+        },
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117666141823845971",
+          "created_at": "2026-11-23T14:07:17.887000+00:00",
+          "excerpt": "The NVIDIA Board of Directors has made the correct and proper decision to return Jensen Huang to the position of CEO. The Country needs Jensen's leadership at NVIDIA in order to ensure the Success and\u2026"
+        },
+        {
+          "url": "https://truthsocial.com/@realDonaldTrump/117663497310955803",
+          "created_at": "2026-11-23T02:54:45.823000+00:00",
+          "excerpt": "I hope the Board of Nvidia rehires Jensen Huang. It would be the best thing for the Company, and also, for the U.S.A. President DONALD J. TRUMP"
+        }
+      ]
+    }
+  ]
+}
